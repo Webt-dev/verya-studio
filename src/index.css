@@ -1,6 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
   --color-ivory: #F7F4EF;
   --color-ink: #111111;
   --color-stone: #D8CBB8;
@@ -24,8 +26,8 @@
   }
 }
 
-@utility focus-ring {
-  &:focus-visible {
+@layer utilities {
+  .focus-ring:focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px var(--color-ivory), 0 0 0 4px var(--color-ink);
   }
