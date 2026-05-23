@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F7F4EF;
+  --color-ink: #111111;
+  --color-stone: #D8CBB8;
+  --color-taupe: #8A6F4D;
+  --color-ash: #6B6B6B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  ::selection {
+    background-color: var(--color-ink);
+    color: white;
+  }
+}
+
+@utility focus-ring {
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-ivory), 0 0 0 4px var(--color-ink);
+  }
+}
